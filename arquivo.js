@@ -1,10 +1,8 @@
-const select = document.getElementById("main-select");
+"use strict";
 
-
-function troqueiDeValor(event){
-    console.log(event)
-}
-
-select.addEventListener("click", function(event){
-    console.log(event)
-}
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a[href^="http"]').forEach((link) => {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+});

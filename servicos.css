@@ -11,9 +11,14 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 img {
@@ -30,6 +35,13 @@ header {
   justify-content: space-between;
   gap: 38px;
   background-color: #ffffff;
+}
+
+header > *,
+.servicos-intro > *,
+.sobre-section > *,
+.footer-grid > * {
+  min-width: 0;
 }
 
 .logo {
@@ -69,6 +81,8 @@ nav {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
+  max-width: 100%;
+  text-align: center;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -110,7 +124,7 @@ nav {
 
 .hero-content h1 {
   margin-bottom: 18px;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  font-size: clamp(2.05rem, 8vw, 4.6rem);
   font-weight: 600;
 }
 
@@ -238,6 +252,7 @@ nav {
   background-color: #ffffff;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow-wrap: anywhere;
 }
 
 .cards-servicos h3 {
@@ -335,6 +350,7 @@ nav {
   color: #075e54;
   font-weight: 700;
   text-align: center;
+  overflow-wrap: anywhere;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
 }
 .sobre-section {
@@ -378,6 +394,10 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+iframe {
+  max-width: 100%;
 }
 
 .card-link {
@@ -547,6 +567,10 @@ footer > h2 {
     order: 3;
   }
 
+  .button-hero {
+    width: min(100%, 280px);
+  }
+
   .hero-servicos {
   position: relative;
   min-height: 320px;
@@ -686,6 +710,16 @@ footer > h2 {
 
   .footer-grid a {
     overflow-wrap: anywhere;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .div-son {
+    gap: 10px 12px;
+  }
+
+  .div-son a {
+    font-size: 0.88rem;
   }
 }
 /* Final service map sizing */
